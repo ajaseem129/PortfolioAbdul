@@ -19,17 +19,4 @@ app.get('/index.ejs', function(req,res){
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen(3003);
