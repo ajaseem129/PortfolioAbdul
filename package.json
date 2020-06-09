@@ -1,7 +1,7 @@
 {
   "name": "abdulportfolio",
   "version": "1.0.0",
-  "description": "My portfolio",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/ajaseem129/Portfolio.git"
   },
-  "author": "Abdul Jaseem",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ajaseem129/Portfolio/issues"
   },
-  "homepage": "https://github.com/ajaseem129/Portfolio#readme"
+  "homepage": "https://github.com/ajaseem129/Portfolio#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "mysql": "^2.18.1",
+    "php": "^1.0.1"
+  }
 }
