@@ -32,6 +32,7 @@
     'port' => '587'
   );
   */
+  
 
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
