@@ -9,7 +9,6 @@ function portfolioFilters()
         url: "/home/filterList",
         dataType: "json",
         success: function(result) {
-            console.log("Entered AJAX")
             console.log(result);
             $("#portfolio-flters").append(' <li data-filter="*" class="filter-active">All</li>')
 
@@ -36,7 +35,6 @@ function fillProjects()
         url: "/home/projectList",
         dataType: "json",
         success: function(result) {
-            console.log("Entered AJAX")
             console.log(result);
             for(proj in result)
             {   
@@ -52,4 +50,9 @@ function fillProjects()
             
         }
     });
+}
+function updateForm()
+{
+    console.log("entered on click");
+    
 }
