@@ -36,6 +36,24 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script>
+    // If `prefers-color-scheme` is not supported, fall back to light mode.
+    // In this case, light.css will be downloaded with `highest` priority.
+    if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+          'beforeend',
+          '<link rel="stylesheet" href="light.css" onload="document.documentElement.style.display = ``">'
+      );
+    }
+  </script>
+  <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- <script type="module" src="/node_modules/dark-mode-toggle/dark-mode-toggle-playground.mjs"></script> -->
+  <script type="module" src="/js/dark-mode-toggle.mjs"></script>
+
+
 </head>
 
 <body>
@@ -58,7 +76,9 @@
           <a href="https://www.linkedin.com/in/abdul-j-820591118" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
-
+      <!-- Dark mode Toggle -->
+      <aside style="align-self: center;"><dark-mode-toggle id="dark-mode-toggle-2"  mode="dark" appearance="toggle"  dark="Dark mode" light="Light Mode"></dark-mode-toggle></aside>
+      
       <nav class="nav-menu">
         <ul>
           <li class="active"><a href="/home"><i class="bx bx-home"></i> <span>Home</span></a></li>
@@ -73,4 +93,5 @@
       <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
     </div>
-  </header>
+    
+</header>

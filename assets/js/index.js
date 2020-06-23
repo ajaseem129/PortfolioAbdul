@@ -1,5 +1,3 @@
-
-
 portfolioFilters();
 function portfolioFilters()
 {
@@ -30,6 +28,8 @@ function portfolioFilters()
 }
 function fillProjects()
 {
+    console.log("Enter index.js")
+
     $.ajax({
         type: 'POST',
         url: "/home/projectList",
