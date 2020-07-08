@@ -13,7 +13,10 @@ var nodemailer = require('nodemailer');
 app.get('/', function(req, res){
     res.render('index');
 });
-
+app.get('/home',function(req,res)
+{
+    res.redirect('/');
+})
 app.post('/home/filterList',function(req,res)
 {   
     var query= "SELECT distinct category from projectList";
