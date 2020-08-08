@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
-
+require('dotenv').config();
 app.use(express.static(__dirname + '/assets'));
 app.set('view engine', 'ejs');
 var dbConf= require('./controllers/dbConf');
@@ -22,7 +22,6 @@ app.post('/home/filterList',function(req,res)
     var query= "SELECT distinct category from projectList";
     dbConf.query(query,function(err,result,fields)
     {
-        // console.log(result);
         res.send(result);
     });
 });
@@ -50,7 +49,7 @@ app.post('/forms/contactme', function(req,res)
         service: 'gmail',
         auth: {
         user: 'jaseemabdul789@gmail.com',
-        pass: 'tqevbfhhlttpoqse'
+        pass: process.env.NODEMAILER_PASS
         }
     });
     
@@ -73,7 +72,6 @@ app.post('/forms/contactme', function(req,res)
     dbConf.query(query,function(err,res,fields)
     {
         if(err) throw err;
-        console.log(query);
     });
 
 

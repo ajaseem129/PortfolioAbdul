@@ -1,11 +1,11 @@
 var express = require('express')
-var app = express()
-
+var app = express();
+require("dotenv").config();
 const mysql = require('mysql')
 const connection = mysql.createConnection({
-    host: '159.65.159.79',
-    user: 'appdotlab',
-    password: 'androidstudio3',
-    database: 'AbdulPortfolio'
+    host: process.env.SERVER_IP,
+    user: process.env.MYSQL_USERNAME,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE
 });
 module.exports = connection;
